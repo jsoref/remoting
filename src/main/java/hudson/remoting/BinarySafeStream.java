@@ -60,7 +60,7 @@ public final class BinarySafeStream {
     public static InputStream wrap(InputStream in) {
         return new FilterInputStream(in) {
             /**
-             * Place a part of the decoded triplet that hasn's read by the caller yet.
+             * Place a part of the decoded triplet that hasn't read by the caller yet.
              * We allocate four bytes because of the way we implement {@link #read(byte[], int, int)},
              * which puts encoded base64 in the given array during the computation.
              */
